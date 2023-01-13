@@ -74,7 +74,7 @@
   </div>
 
   <!-- Send tokens modal -->
-  <div class="modal fade text-start" id="sendTokensModal" tabindex="-1" aria-labelledby="sendTokensModalLabel" aria-hidden="true">
+  <div v-if="selectedToken" class="modal fade text-start" id="sendTokensModal" tabindex="-1" aria-labelledby="sendTokensModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
