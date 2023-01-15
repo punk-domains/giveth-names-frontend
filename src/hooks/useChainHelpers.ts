@@ -82,7 +82,7 @@ export default function useChainHelpers() {
       } else if (networkId === 100) {
         // Gnosis Chain
         urls = [
-          "https://rpc.gnosis.gateway.fm"
+          "https://gnosischain-rpc.gateway.pokt.network"
         ];
       } else if (networkId === 137) {
         // Polygon PoS Chain
@@ -212,7 +212,7 @@ export default function useChainHelpers() {
         chainId: "0x64",
         chainName: "Gnosis Chain",
         nativeCurrency: { decimals: 18, name: "XDAI", symbol: "XDAI" }, 
-        rpcUrls: ["https://rpc.gnosis.gateway.fm"]
+        rpcUrls: ["https://gnosischain-rpc.gateway.pokt.network"]
       }] 
     } else if (networkName == "BNB Smart Chain") {
       method = "wallet_addEthereumChain"
