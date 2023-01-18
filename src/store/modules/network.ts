@@ -10,15 +10,13 @@ export default {
     networkCurrency: "FTM",
     networkName: "Unsupported Network",
     supportedNetworks: {
-      250: "Fantom"
+      250: "Fantom" // @todo
     }
   }),
 
   getters: { 
     getBlockExplorerBaseUrl() {
-      // TODO
-      //return "https://testnet.ftmscan.com";
-      return "https://ftmscan.com";
+      return "https://ftmscan.com"; // @todo
     },
     
     getChainId() {
@@ -68,9 +66,8 @@ export default {
 
   mutations: { 
     setNetworkData(state) {
-      // TODO
-      state.networkName = "Fantom";
-      state.networkCurrency = "FTM";
+      state.networkName = "Fantom"; // @todo
+      state.networkCurrency = "FTM"; // @todo
     }
   },
 

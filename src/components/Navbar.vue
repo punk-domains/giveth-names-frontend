@@ -135,8 +135,6 @@ export default {
   border-radius: 0px 0px 10px 10px;
   /*background: linear-gradient(30deg, #C71585 30%, #c111c3 100%);*/
   background: transparent;
-  padding: 20px;
-  
 }
 .navbar-img {
   margin-right: 5px;

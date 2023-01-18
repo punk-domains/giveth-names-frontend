@@ -11,11 +11,11 @@ export default {
   state: () => ({ 
     discountPercentage: 0,
     tldName: ".giveth",
-    tldAddress: "0x2ef8bbfa2a753bc2886fe24181fba454c3149846", // TODO
+    tldAddress: "0x2ef8bbfa2a753bc2886fe24181fba454c3149846", // @TODO
     tldContract: null,
-    tldChainId: 16,
-    tldChainName: "Flare",
-    minterAddress: "0xa6e5a8Fa90cdF22a57Be74B66CDffEBA6C524e35", // TODO
+    tldChainId: 16, // @todo
+    tldChainName: "Flare", // @todo
+    minterAddress: "0xa6e5a8Fa90cdF22a57Be74B66CDffEBA6C524e35", // @TODO
     minterContract: null,
     minterPaused: true,
     minterTldPrice1: 5000,
