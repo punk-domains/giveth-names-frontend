@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <Referral />
+      <!-- <Referral /> -->
 
     </div>
   </div>
@@ -105,7 +105,7 @@ import { useEthers } from 'vue-dapp';
 import { useToast, TYPE } from "vue-toastification";
 import MyDomain from '../components/MyDomain.vue';
 import Sidebar from '../components/Sidebar.vue';
-import Referral from '../components/Referral.vue';
+// import Referral from '../components/Referral.vue';
 import tldAbi from '../abi/PunkTLD.json';
 import useChainHelpers from "../hooks/useChainHelpers";
 
@@ -121,7 +121,7 @@ export default {
 
   components: {
     MyDomain,
-    Referral,
+    // Referral,
     Sidebar
   },
 
