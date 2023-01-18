@@ -23,8 +23,8 @@ export default {
     tokenContract: null,
     tokenAllowance: 0, // user's allowance for wrapper contract
     tokenBalance: 0, // user's balance
-    tokenName: "FTM",
-    tokenDecimals: 4,
+    tokenName: "FLR",
+    tokenDecimals: 18,
     userAddress: null,
     userAllDomainNames: [], // all domain names of current user (default + manually added)
     userDomainNamesKey: null,

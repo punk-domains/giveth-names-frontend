@@ -1,13 +1,13 @@
 <template>
   <div class="container text-center">
-    <img class="img-fluid main-img rounded" src="../assets/fantom-logo.svg" />
+    <img class="img-fluid main-img rounded" src="../assets/giveth-logo-vertical.png" />
 
     <div class="text-align-header mt-4 mb-2">
       <h1>Mint your {{getTldName}} web3 username!</h1>
       <p>
-        50% of each mint payment goes to 
-        <a href="https://forum.fantom.network/t/ecosystem-support-vault/69" target="_blank">
-          supporting projects that benefit the Fantom ecosystem.
+        80% of each mint payment goes to 
+        <a href="#" target="_blank">
+          public goods funding matching pool that benefit the Giveth ecosystem.
         </a>
         </p>
     </div>
@@ -340,7 +340,7 @@ export default {
 }
 
 .main-img {
-  width: 4em;
+  width: 17em;
 }
 
 th:first-of-type {

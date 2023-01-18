@@ -2,8 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand">
-        <img src="../assets/fantom-logo.svg" alt="" height="30" class="d-inline-block align-bottom navbar-img">
-        Fantom Names
+        <img src="../assets/giveth-logo-horizontal.png" alt="" width="200" class="d-inline-block align-middle navbar-img">
       </router-link>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,11 +14,11 @@
         <div class="d-flex ms-auto">
 
           <div class="navbar-menu-buttons">
-            <a 
+            <!-- <a 
               class="btn btn-primary mx-2 navbar-menu-btn" 
-              href="https://paintswap.finance/marketplace/fantom/collections/fantom-names-(.fantom)/nfts" 
+              href="#" 
               target="_blank"
-            >Marketplace</a>
+            >Marketplace</a> -->
 
             <div v-if="isActivated" class="btn-group mx-2 navbar-menu-btn">
               <router-link tag="button" class="btn btn-primary" to="/send-tokens">Send Tokens</router-link>
