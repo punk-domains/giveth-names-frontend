@@ -10,7 +10,7 @@ export default {
     networkCurrency: "FLR", // @todo
     networkName: "Unsupported Network",
     supportedNetworks: {
-      14: "Flare" // @todo
+      16: "Coston Testnet" // @todo
     }
   }),
 
@@ -66,7 +66,7 @@ export default {
 
   mutations: { 
     setNetworkData(state) {
-      state.networkName = "Flare"; // @todo
+      state.networkName = "Coston Testnet"; // @todo
       state.networkCurrency = "FLR"; // @todo
     }
   },
