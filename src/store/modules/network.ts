@@ -7,16 +7,16 @@ export default {
   namespaced: true,
   
   state: () => ({
-    networkCurrency: "FTM",
+    networkCurrency: "FLR", // @todo
     networkName: "Unsupported Network",
     supportedNetworks: {
-      250: "Fantom" // @todo
+      14: "Flare" // @todo
     }
   }),
 
   getters: { 
     getBlockExplorerBaseUrl() {
-      return "https://ftmscan.com"; // @todo
+      return "https://flare-explorer.flare.network"; // @todo
     },
     
     getChainId() {
@@ -66,8 +66,8 @@ export default {
 
   mutations: { 
     setNetworkData(state) {
-      state.networkName = "Fantom"; // @todo
-      state.networkCurrency = "FTM"; // @todo
+      state.networkName = "Flare"; // @todo
+      state.networkCurrency = "FLR"; // @todo
     }
   },
 
