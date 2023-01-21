@@ -9,9 +9,15 @@ npm install
 npm run dev
 ```
 
-## tokens.json
+## What to adapt?
 
-Add the correct tokens (for the Send Tokens page).
+Search for all `@todo` occurences in the code.
+
+In addition to that also change the necessary files in the `abi` folder:
+
+- Minter.json (Minter contract ABI)
+- tlds.json (add the TLD address for a given chain ID)
+- tokens.json (add the correct tokens; this shows up on the Send Tokens page)
 
 ## Branches & deployment
 

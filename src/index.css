@@ -1,16 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@font-face { 
+  font-family: "Gyre Adventor";
+  src: url("assets/font/texgyreadventor-regular.otf"); 
+  font-style: normal;
+}
+
+@font-face { 
+  font-family: "Gyre Adventor";
+  src: url("assets/font/texgyreadventor-bold.otf"); 
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face { 
+  font-family: "Gyre Adventor";
+  src: url("assets/font/texgyreadventor-bolditalic.otf"); 
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face { 
+  font-family: "Gyre Adventor";
+  src: url("assets/font/texgyreadventor-italic.otf"); 
+  font-style: italic;
+}
 
 a {
   color: #fff;
 }
 
 a:hover {
-  color: #fff;
+  color: #FED670;
 }
 
 body {
-  font-family: 'Figtree', sans-serif;
-  background: linear-gradient(90deg, hsla(219, 100%, 55%, 1) 0%, hsla(242, 42%, 40%, 1) 100%);
+  font-family: 'Gyre Adventor', sans-serif;
+  background: linear-gradient(90deg, #1B1657 0%, #5326EC 100%); /* @todo */
   color: #fff;
 }
 
@@ -39,9 +63,9 @@ hr {
 }
 
 .btn-primary:hover {
-  color: #000;
-  background: #fff;
-  border: 2px solid white;
+  color: #fff;
+  background: #FED670;
+  border: 2px solid #FED670;
 }
 
 .btn-secondary, .btn-secondary:active, .btn-secondary:focus, .btn-secondary:disabled {
@@ -64,6 +88,10 @@ hr {
   padding: 20px;
   border-radius: 10px;
   border: 2px solid #fff;
+}
+
+.home-punchline-domain {
+  color: #FED670;
 }
 
 .img-thumbnail {

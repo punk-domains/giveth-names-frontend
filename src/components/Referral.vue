@@ -12,8 +12,8 @@
           <div class="col-md-6 offset-md-3">
             <input 
               class="form-control text-center clipboard"
-              :value="'https://fantomnames.org/?ref=' + this.getNameOrAddress"
-              @click="copyToClipboard('https://fantomnames.org/?ref=' + this.getNameOrAddress)"
+              :value="getReferralUrl"
+              @click="copyToClipboard(getReferralUrl)"
               readonly
             >
           </div>
@@ -33,13 +33,17 @@ export default {
   computed: {
     ...mapGetters("user", ["getUserAddress", "getUserSelectedName"]),
     ...mapGetters("tld", ["getReferralFee"]),
-    
-    getNameOrAddress() {
+
+    getReferralUrl() {
+      let nameOrAddress;
+
       if (this.getUserSelectedName) {
-        return this.getUserSelectedName;
+        nameOrAddress = this.getUserSelectedName;
       } else {
-        return this.getUserAddress;
+        nameOrAddress = this.getUserAddress;
       }
+
+      return window.location.origin + "/?ref=" + nameOrAddress;
     }
   },
 

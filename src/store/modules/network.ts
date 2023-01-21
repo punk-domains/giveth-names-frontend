@@ -7,16 +7,16 @@ export default {
   namespaced: true,
   
   state: () => ({
-    networkCurrency: "FLR", // @todo
+    networkCurrency: "XDAI", // @todo
     networkName: "Unsupported Network",
     supportedNetworks: {
-      16: "Coston Testnet" // @todo
+      100: "Gnosis Chain" // @todo
     }
   }),
 
   getters: { 
     getBlockExplorerBaseUrl() {
-      return "https://flare-explorer.flare.network"; // @todo
+      return "https://gnosisscan.io"; // @todo
     },
     
     getChainId() {
@@ -66,8 +66,8 @@ export default {
 
   mutations: { 
     setNetworkData(state) {
-      state.networkName = "Coston Testnet"; // @todo
-      state.networkCurrency = "FLR"; // @todo
+      state.networkName = "Gnosis Chain"; // @todo
+      state.networkCurrency = "XDAI"; // @todo
     }
   },
 

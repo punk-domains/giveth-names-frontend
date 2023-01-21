@@ -2,12 +2,12 @@
   <div class="container text-center">
     <img class="img-fluid main-img rounded" src="../assets/giveth-logo-vertical.png" />
 
-    <div class="text-align-header mt-4 mb-2">
-      <h1>Mint your {{getTldName}} web3 username!</h1>
-      <p>
-        80% of each mint payment goes to 
-        <a href="#" target="_blank">
-          public goods funding matching pool that benefit the Giveth ecosystem.
+    <div class="text-align-header mt-2 mb-2">
+      <h1>Mint your <span class="home-punchline-domain">{{getTldName}}</span> web3 username!</h1>
+      <p class="mt-4">
+        80% of each mint payment goes to the 
+        <a href="https://giveth.io/project/Giveth-Matching-Pool-0" target="_blank">
+          Giveth Matching Pool.
         </a>
         </p>
     </div>
@@ -314,7 +314,7 @@ export default {
 }
 
 .container {
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: 50px;
 }
 
@@ -358,7 +358,7 @@ tr:last-of-type td:last-of-type {
 }
 
 .table-light {
-  color: #0D0F1A;
+  color: #1B1657;
 }
 
 .table-ppl {

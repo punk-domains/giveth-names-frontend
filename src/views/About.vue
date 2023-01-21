@@ -1,27 +1,16 @@
 <template>
 <div class="container">
-  <h1 class="text-center">About Giveth Domains</h1>
+  <h1 class="text-center">About Giveth Names</h1>
   
   <div class="row mt-3">
     <div class="col-md-8 offset-md-2 mb-3">
       <p class="mt-4">
         <!-- @todo -->
-        Flare Domains is the first web3 domain service in the Flare ecosystem.
+        Giveth Names are web3 usernames brought to you by Giveth and Punk Domains.
       </p>
 
       <p>
-        The first available domain extension is the <code>.flr</code> extension, which allows for one-time purchase domains 
-        that never expire.
-      </p>
-
-      <p>
-        The <code>.flr</code> domain is just the first step of bringing Web3 Social into the Flare community. 
-        Over the course of the next 6 months we will be building and revealing new utilities and usecases for Flare Domains, 
-        and onboarding various kinds of integration partners.
-      </p>
-
-      <p>
-        Exciting times ahead of us. Stay tuned...
+        80% of proceeds from minting new <code>.giveth</code> names go to the Giveth Matching Pool.
       </p>
 
     </div>

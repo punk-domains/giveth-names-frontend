@@ -126,7 +126,7 @@ export default {
   cursor: pointer;
 }
 .navbar-brand {
-  font-family: 'Figtree', Arial, Helvetica, sans-serif;
+  /*font-family: 'Figtree', Arial, Helvetica, sans-serif;*/
 }
 .navbar-dark .navbar-brand {
   /*color: #fff;*/
