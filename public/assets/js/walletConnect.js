@@ -394,10 +394,10 @@
 		}
 
 		function H(e, t) {
-      e = 250; // TODO: change chain ID
+      e = 100; // @todo: change chain ID
 			let r;
 			const n = s[e];
-			return n && (r = `https://1rpc.io/ftm`), r // TODO
+			return n && (r = `https://gnosischain-rpc.gateway.pokt.network`), r // @todo: change chain RPC
 		}
 
 		function z(e, t) {
@@ -12049,7 +12049,7 @@
 			constructor(e) {
 				if (super({
 						pollingInterval: e.pollingInterval || 8e3
-					}), this.bridge = "https://bridge.walletconnect.org", this.qrcode = !0, this.qrcodeModal = o.default, this.qrcodeModalOptions = void 0, this.rpc = null, this.infuraId = "", this.http = null, this.isConnecting = !1, this.connected = !1, this.connectCallbacks = [], this.accounts = [], this.chainId = 250, this.rpcUrl = "", this.enable = () => n.__awaiter(this, void 0, void 0, (function*() {
+					}), this.bridge = "https://bridge.walletconnect.org", this.qrcode = !0, this.qrcodeModal = o.default, this.qrcodeModalOptions = void 0, this.rpc = null, this.infuraId = "", this.http = null, this.isConnecting = !1, this.connected = !1, this.connectCallbacks = [], this.accounts = [], this.chainId = 100 /* @todo: change chain ID */, this.rpcUrl = "", this.enable = () => n.__awaiter(this, void 0, void 0, (function*() {
 						const e = yield this.getWalletConnector();
 						if (e) return this.start(), this.subscribeWalletConnector(), e.accounts;
 						throw new Error("Failed to connect to WalleConnect")
