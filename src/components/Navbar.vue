@@ -2,8 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand">
-        <img src="../assets/fantom-logo.svg" alt="" height="30" class="d-inline-block align-bottom navbar-img">
-        Fantom Names
+        <img src="../assets/giveth-logo-horizontal.png" alt="" width="200" class="d-inline-block align-middle navbar-img">
       </router-link>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,11 +14,11 @@
         <div class="d-flex ms-auto">
 
           <div class="navbar-menu-buttons">
-            <a 
+            <!-- <a 
               class="btn btn-primary mx-2 navbar-menu-btn" 
-              href="https://paintswap.finance/marketplace/fantom/collections/fantom-names-(.fantom)/nfts" 
+              href="#" 
               target="_blank"
-            >Marketplace</a>
+            >Marketplace</a> -->
 
             <div v-if="isActivated" class="btn-group mx-2 navbar-menu-btn">
               <router-link tag="button" class="btn btn-primary" to="/send-tokens">Send Tokens</router-link>
@@ -127,7 +126,7 @@ export default {
   cursor: pointer;
 }
 .navbar-brand {
-  font-family: 'Figtree', Arial, Helvetica, sans-serif;
+  /*font-family: 'Figtree', Arial, Helvetica, sans-serif;*/
 }
 .navbar-dark .navbar-brand {
   /*color: #fff;*/
@@ -136,8 +135,6 @@ export default {
   border-radius: 0px 0px 10px 10px;
   /*background: linear-gradient(30deg, #C71585 30%, #c111c3 100%);*/
   background: transparent;
-  padding: 20px;
-  
 }
 .navbar-img {
   margin-right: 5px;

@@ -15,15 +15,17 @@
 
   <div class="container-fluid text-center">
 
-    <a class="icons" href="http://docs.punk.domains" target="_blank"><i class="bi bi-journal-text"></i></a>
+    <a class="icons" target="_blank" href="http://docs.punk.domains"><i class="bi bi-journal-text"></i></a>
 
-    <a class="icons" target="_blank" href="https://github.com/punk-domains"><i class="bi bi-github"></i></a>
+    <a class="icons" target="_blank" href="https://github.com/punk-domains/giveth-names-frontend"><i class="bi bi-github"></i></a>
 
-    <a class="icons" target="_blank" href="https://discord.gg/8dSrwrAQeu"><i class="bi bi-discord"></i></a>
+    <a class="icons" target="_blank" href="https://discord.giveth.io/"><i class="bi bi-discord"></i></a>
 
-    <a class="icons" target="_blank" href="https://twitter.com/fantomnamesorg"><i class="bi bi-twitter"></i></a>
+    <!-- @todo -->
+    <a class="icons" target="_blank" href="https://twitter.com/Givethio"><i class="bi bi-twitter"></i></a>
 
-    <a class="icons" href="http://blog.punk.domains" target="_blank"><i class="bi bi-pencil-square"></i></a>
+    <!-- @todo -->
+    <a class="icons" target="_blank" href="https://medium.com/giveth/"><i class="bi bi-pencil-square"></i></a>
     
   </div>
 </template>

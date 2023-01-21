@@ -10,20 +10,20 @@ export default {
   
   state: () => ({ 
     discountPercentage: 0,
-    tldName: ".fantom",
-    tldAddress: "0xBDACF94dDCAB51c39c2dD50BffEe60Bb8021949a", // TODO
+    tldName: ".giveth", // @todo
+    tldAddress: "0xEEa3e593CDAf9D18780f9D58BAD142AF6Bd9522a", // @todo
     tldContract: null,
-    tldChainId: 250,
-    tldChainName: "Fantom",
-    minterAddress: "0x7Df67B2ef4eEDf49Fc53Bb6E94e90e9546FC6c6B", // TODO
+    tldChainId: 100, // @todo
+    tldChainName: "Gnosis Chain", // @todo
+    minterAddress: "0x9C3BaeAd881BDAAB0Cd0BB112ce2a17Aba390Aba", // @todo
     minterContract: null,
     minterPaused: true,
-    minterTldPrice1: 5000,
-    minterTldPrice2: 2500,
-    minterTldPrice3: 779,
-    minterTldPrice4: 129,
-    minterTldPrice5: 49,
-    referralFee: 1000
+    minterTldPrice1: 999, // @todo
+    minterTldPrice2: 399, // @todo
+    minterTldPrice3: 99, // @todo
+    minterTldPrice4: 15, // @todo
+    minterTldPrice5: 9, // @todo
+    referralFee: 0 // @todo
   }),
 
   getters: { 

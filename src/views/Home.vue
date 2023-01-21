@@ -1,13 +1,13 @@
 <template>
   <div class="container text-center">
-    <img class="img-fluid main-img rounded" src="../assets/fantom-logo.svg" />
+    <img class="img-fluid main-img rounded" src="../assets/giveth-logo-vertical.png" />
 
-    <div class="text-align-header mt-4 mb-2">
-      <h1>Mint your {{getTldName}} web3 username!</h1>
-      <p>
-        50% of each mint payment goes to 
-        <a href="https://forum.fantom.network/t/ecosystem-support-vault/69" target="_blank">
-          supporting projects that benefit the Fantom ecosystem.
+    <div class="text-align-header mt-2 mb-2">
+      <h1>Mint your <span class="home-punchline-domain">{{getTldName}}</span> web3 username!</h1>
+      <p class="mt-4">
+        80% of each mint payment goes to the 
+        <a href="https://giveth.io/project/Giveth-Matching-Pool-0" target="_blank">
+          Giveth Matching Pool.
         </a>
         </p>
     </div>
@@ -119,7 +119,7 @@
     
   </div>
 
-  <Referral v-if="isActivated" />
+  <!-- <Referral v-if="isActivated" /> -->
 
 </template>
 
@@ -129,7 +129,7 @@ import { useBoard, useEthers } from 'vue-dapp';
 import { mapActions, mapGetters, mapMutations } from 'vuex';
 import { useToast, TYPE } from "vue-toastification";
 import WaitingToast from "../components/toasts/WaitingToast.vue";
-import Referral from '../components/Referral.vue';
+// import Referral from '../components/Referral.vue';
 import useDomainHelpers from "../hooks/useDomainHelpers";
 import useChainHelpers from "../hooks/useChainHelpers";
 import MinterAbi from "../abi/Minter.json";
@@ -149,7 +149,7 @@ export default {
   },
 
   components: {
-    Referral
+    // Referral
   },
 
   computed: {
@@ -314,7 +314,7 @@ export default {
 }
 
 .container {
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: 50px;
 }
 
@@ -340,7 +340,7 @@ export default {
 }
 
 .main-img {
-  width: 4em;
+  width: 17em;
 }
 
 th:first-of-type {
@@ -358,7 +358,7 @@ tr:last-of-type td:last-of-type {
 }
 
 .table-light {
-  color: #0D0F1A;
+  color: #1B1657;
 }
 
 .table-ppl {

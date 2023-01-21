@@ -7,18 +7,16 @@ export default {
   namespaced: true,
   
   state: () => ({
-    networkCurrency: "FTM",
+    networkCurrency: "XDAI", // @todo
     networkName: "Unsupported Network",
     supportedNetworks: {
-      250: "Fantom"
+      100: "Gnosis Chain" // @todo
     }
   }),
 
   getters: { 
     getBlockExplorerBaseUrl() {
-      // TODO
-      //return "https://testnet.ftmscan.com";
-      return "https://ftmscan.com";
+      return "https://gnosisscan.io"; // @todo
     },
     
     getChainId() {
@@ -68,9 +66,8 @@ export default {
 
   mutations: { 
     setNetworkData(state) {
-      // TODO
-      state.networkName = "Fantom";
-      state.networkCurrency = "FTM";
+      state.networkName = "Gnosis Chain"; // @todo
+      state.networkCurrency = "XDAI"; // @todo
     }
   },
 
