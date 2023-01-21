@@ -19,6 +19,10 @@ In addition to that also change the necessary files in the `abi` folder:
 - tlds.json (add the TLD address for a given chain ID)
 - tokens.json (add the correct tokens; this shows up on the Send Tokens page)
 
+## Cover/preview image (Twitter/FB)
+
+Use the Twitter post size of 1600x900 px.
+
 ## Branches & deployment
 
 - **Important:** Never commit directly to the `main` branch.
