@@ -9,7 +9,7 @@ export default {
   namespaced: true,
   
   state: () => ({ 
-    discountPercentage: 0,
+    discountPercentage: 50,
     tldName: ".giveth", // @todo
     tldAddress: "0xEEa3e593CDAf9D18780f9D58BAD142AF6Bd9522a", // @todo
     tldContract: null,
@@ -150,6 +150,10 @@ export default {
       // fetch referral fee
       const refFee = await minterContract.referralFee();
       commit("setReferralFee", refFee);
+
+      // fetch discount Bps
+      const dBps = await minterContract.discountBps();
+      commit("setDiscountPercentage", (Number(dBps) / 100));
     }
   }
 };

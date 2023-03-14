@@ -48,7 +48,7 @@ export default {
   },
 
   methods: {
-    ...mapActions("user", ["checkIfAdmin", "fetchUserDomainNames", "fetchCanUserBuy"]),
+    ...mapActions("user", ["checkIfAdmin", "fetchUserDomainNames", "fetchCanUserGetDiscount"]),
     ...mapActions("tld", ["fetchMinterContractData"]),
 
     ...mapMutations("user", ["setUserData"]),

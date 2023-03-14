@@ -158,19 +158,25 @@ export default {
     ...mapGetters("tld", ["getTldChainId", "getTldChainName", "getMinterAddress", "getTldContract", "getMinterTldPrice1", "getMinterTldPrice2", "getMinterTldPrice3", "getMinterTldPrice4", "getMinterTldPrice5", "getMinterPaused", "getMinterDiscountPercentage", "getTldName"]),
 
     getPrice() {
+      let discountRatio = 1;
+
+      if (this.getDiscountEligible) {
+        discountRatio = 1 - (this.getMinterDiscountPercentage / 100);
+      }
+
       if (this.chosenDomainName) {
         if (this.chosenDomainName.match(/./gu).length === 1) {
-          return this.getMinterTldPrice1;
+          return this.getMinterTldPrice1 * discountRatio;
         } else if (this.chosenDomainName.match(/./gu).length === 2) {
-          return this.getMinterTldPrice2;
+          return this.getMinterTldPrice2 * discountRatio;
         } else if (this.chosenDomainName.match(/./gu).length === 3) {
-          return this.getMinterTldPrice3;
+          return this.getMinterTldPrice3 * discountRatio;
         } else if (this.chosenDomainName.match(/./gu).length === 4) {
-          return this.getMinterTldPrice4;
+          return this.getMinterTldPrice4 * discountRatio;
         }
       }
       
-      return this.getMinterTldPrice5;
+      return this.getMinterTldPrice5 * discountRatio;
     },
 
     domainLowerCase() {
@@ -199,7 +205,7 @@ export default {
   },
 
   methods: {
-    ...mapActions("user", ["fetchCanUserBuy", "getPaymentTokenDecimals"]),
+    ...mapActions("user", ["getPaymentTokenDecimals"]),
     ...mapMutations("user", ["addDomainManually", "setPaymentTokenAllowance"]),
 
     async buyDomain() {
@@ -230,7 +236,7 @@ export default {
           this.domainLowerCase,
           this.address,
           referral,
-          false,
+          this.getDiscountEligible,
           {
             value: ethers.utils.parseEther(String(this.getPrice))
           }

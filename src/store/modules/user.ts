@@ -2,8 +2,10 @@ import { ethers } from 'ethers';
 import { useEthers, displayEther, shortenAddress } from 'vue-dapp';
 import MinterAbi from "../../abi/Minter.json";
 import TldAbi from "../../abi/PunkTLD.json";
+import useChainHelpers from "../../hooks/useChainHelpers";
 
 const { address, balance, chainId, signer } = useEthers();
+const { getFallbackProvider } = useChainHelpers();
 
 export default {
   namespaced: true,
@@ -11,6 +13,7 @@ export default {
   state: () => ({ 
     canUserBuy: true, // set to true, because anyone can mint a domain now (before only NFT holders were eligible)
     discountEligible: false,
+    discountBps: 5000,
     isTldAdmin: false,
     isMinterAdmin: false,
     isRoyaltyFeeUpdater: false,
@@ -39,6 +42,9 @@ export default {
     },
     getDiscountEligible(state) {
       return state.discountEligible;
+    },
+    getDiscountBps(state) {
+      return state.discountBps;
     },
     getUserAddress(state) {
       return state.userAddress;
@@ -141,6 +147,10 @@ export default {
       }
     },
 
+    setDiscountBps(state, dBps) {
+      state.discountBps = dBps;
+    },
+
     setIsRoyaltyFeeUpdater(state, admin) {
       state.isRoyaltyFeeUpdater = admin;
     },
@@ -227,7 +237,7 @@ export default {
       let selectedNameKey = null;
 
       if (address.value) {
-        dispatch("fetchCanUserBuy");
+        dispatch("fetchCanUserGetDiscount");
 
         userDomainNamesKey = "userDomainNames" + String(chainId.value) + String(shortenAddress(address.value));
         selectedNameKey = "selectedName" + String(chainId.value) + String(shortenAddress(address.value));
@@ -286,9 +296,27 @@ export default {
       }
     },
 
-    async fetchCanUserBuy({ commit, rootGetters }) {
+    async fetchCanUserGetDiscount({ commit, rootGetters }) {
       if (address.value) {
-        // fetch if user can buy a domain
+        // fetch if user can get a discount on minting a domain
+
+        const givethNftAddress = "0x78FDE77737d5b9ab32fC718C9535c7f1B8ce84dB";
+
+        const pfpInterface = new ethers.utils.Interface([
+          "function balanceOf(address) public view returns (uint256)"
+        ]);
+
+        let fProvider = getFallbackProvider(1); // Ethereum
+
+        const pfpContract = new ethers.Contract(givethNftAddress, pfpInterface, fProvider);
+
+        const nftBalance = await pfpContract.balanceOf(address.value);
+
+        if (Number(nftBalance) > 0) {
+          commit("setCanGetDiscount", true);
+        }
+
+        // check if user can mint
         /*
         const minterIntfc = new ethers.utils.Interface(MinterAbi);
         const minterContract = new ethers.Contract(rootGetters["tld/getMinterAddress"], minterIntfc, signer.value);
