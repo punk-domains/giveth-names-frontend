@@ -15,7 +15,7 @@ export default {
     tldContract: null,
     tldChainId: 100, // @todo
     tldChainName: "Gnosis Chain", // @todo
-    minterAddress: "0x9C3BaeAd881BDAAB0Cd0BB112ce2a17Aba390Aba", // @todo
+    minterAddress: "0xff56cC27Af976A4A14a0075955037444b6cf08AC", // @todo
     minterContract: null,
     minterPaused: true,
     minterTldPrice1: 999, // @todo

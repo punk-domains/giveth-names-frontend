@@ -230,6 +230,7 @@ export default {
           this.domainLowerCase,
           this.address,
           referral,
+          false,
           {
             value: ethers.utils.parseEther(String(this.getPrice))
           }
