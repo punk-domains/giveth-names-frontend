@@ -17,6 +17,7 @@ export default {
     tldChainName: "Gnosis Chain", // @todo
     minterAddress: "0xff56cC27Af976A4A14a0075955037444b6cf08AC", // @todo
     minterContract: null,
+    minterLoadingData: false,
     minterPaused: true,
     minterTldPrice1: 999, // @todo
     minterTldPrice2: 399, // @todo
@@ -51,6 +52,9 @@ export default {
     getMinterContract(state) {
       return state.minterContract;
     },
+    getMinterLoadingData(state) {
+      return state.minterLoadingData;
+    },
     getMinterPaused(state) {
       return state.minterPaused;
     },
@@ -82,12 +86,16 @@ export default {
       state.tldContract = new ethers.Contract(state.tldAddress, tldIntfc, fProvider);
     },
 
+    setDiscountPercentage(state, percentage) {
+      state.discountPercentage = percentage;
+    },
+
     setMinterContract(state, contract) {
       state.minterContract = contract;
     },
 
-    setDiscountPercentage(state, percentage) {
-      state.discountPercentage = percentage;
+    setMinterLoadingData(state, loading) {
+      state.minterLoadingData = loading;
     },
 
     setMinterPaused(state, paused) {
@@ -116,6 +124,8 @@ export default {
 
   actions: {
     async fetchMinterContractData({commit, state}) {
+      commit("setMinterLoadingData", true);
+
       let fProvider = getFallbackProvider(state.tldChainId);
 
       // minter contract
@@ -147,13 +157,15 @@ export default {
       const domainPrice5 = ethers.utils.formatEther(priceWei5);
       commit("setMinterTldPrice5", domainPrice5);
 
-      // fetch referral fee
-      const refFee = await minterContract.referralFee();
-      commit("setReferralFee", refFee);
-
       // fetch discount Bps
       const dBps = await minterContract.discountBps();
       commit("setDiscountPercentage", (Number(dBps) / 100));
+
+      commit("setMinterLoadingData", false);
+
+      // fetch referral fee
+      const refFee = await minterContract.referralFee();
+      commit("setReferralFee", refFee);
     }
   }
 };
