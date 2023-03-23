@@ -37,7 +37,8 @@
 
     <div class="text-align-header">
       <p class="mt-5 price-text">
-          Domain price: {{Math.floor(getPrice)}} {{getPaymentTokenName}}
+          Domain price: {{ getPrice }} {{getPaymentTokenName}} 
+          <small v-if="hasDiscount"><br/><em>(Givers NFT holders get {{ getMinterDiscountPercentage }}% discount!)</em></small>
       </p>
     </div>
 
@@ -187,6 +188,14 @@ export default {
 
     domainLowerCase() {
       return this.chosenDomainName.toLowerCase();
+    },
+
+    hasDiscount() {
+      if (this.getDiscountEligible && this.getMinterDiscountPercentage > 0) {
+        return true;
+      }
+
+      return false;
     },
 
     hasUserEnoughTokens() {
